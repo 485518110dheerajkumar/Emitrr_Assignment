@@ -1,0 +1,154 @@
+/* ---------- Global ---------- */
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #d0d3e1, #eef1f7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #11161e;
+  min-height: 88vw;
+}
+
+h2 {
+  margin: 16px 0;
+  font-weight: 600;
+}
+
+/* ---------- Canvas ---------- */
+.canvas {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- Node Layout ---------- */
+.node-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.children {
+  display: flex;
+  gap: 60px;
+  margin-top: 30px;
+}
+
+/* ---------- Node Container ---------- */
+.node-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Node Card ---------- */
+.node {
+  min-width: 160px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Node Types ---------- */
+.node.start {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  border-color: #93c5fd;
+}
+
+.node.action {
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  border-color: #86efac;
+}
+
+.node.branch {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-color: #facc15;
+}
+
+.node.end {
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  border-color: #d1d5db;
+}
+
+/* ---------- Small Menu ---------- */
+.node-menu {
+  position: absolute;
+  top: 120%;
+  min-width: 160px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 20;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Menu Buttons ---------- */
+.node-menu button {
+  background: #f9fafb;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  
+}
+
+.node-menu button:hover {
+  background: #e5e7eb;
+}
+
+/* ---------- Top Buttons ---------- */
+.top-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.top-actions button {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  
+}
+
+.top-actions button:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.top-actions button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- SVG Lines ---------- */
+.lines {
+  width: 100%;
+  height: 40px;
+}
